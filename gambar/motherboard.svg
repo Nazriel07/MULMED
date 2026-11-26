@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#10231c"/><stop offset="1" stop-color="#07110d"/></linearGradient>
+  <linearGradient id="chip" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1d4438"/><stop offset="1" stop-color="#0d241d"/></linearGradient>
+  <linearGradient id="board" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#12352b"/><stop offset="1" stop-color="#0a1f19"/></linearGradient>
+  <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#2dd4bf" stroke-opacity=".09" stroke-width="1"/></pattern>
+  <filter id="glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="14" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="soft" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="5"/></filter>
+</defs>
+<rect width="800" height="600" rx="28" fill="url(#bg)"/>
+<rect x="24" y="24" width="752" height="552" rx="18" fill="url(#board)" stroke="#34d399" stroke-opacity=".45" stroke-width="3"/>
+<rect x="24" y="24" width="752" height="552" rx="18" fill="url(#grid)"/>
+<g stroke="#2dd4bf" stroke-opacity=".45" stroke-width="2" stroke-linecap="round">
+  <path d="M60 120h120l40 40h70M740 110H640l-40 40h-70M60 480h130l40-40h60M740 470H630l-45-45h-60M400 60v70M400 540v-70M110 300h90M690 300h-90"/>
+</g>
+<g fill="#fbbf24"><circle cx="220" cy="160" r="4"/><circle cx="530" cy="150" r="4"/><circle cx="230" cy="440" r="4"/><circle cx="525" cy="425" r="4"/></g>
+<g stroke="#34d399" stroke-width="3" opacity=".8">
+  <path d="M340 165v-25M370 165v-25M400 165v-25M430 165v-25M460 165v-25M340 385v25M370 385v25M400 385v25M430 385v25M460 385v25"/>
+</g>
+<rect x="325" y="160" width="150" height="230" rx="12" fill="#0c2b22" stroke="#4ade80" stroke-width="3"/>
+<rect x="348" y="205" width="104" height="140" rx="8" fill="#10231c" stroke="#2dd4bf" stroke-width="2"/>
+<circle cx="400" cy="275" r="40" fill="#10b981" fill-opacity=".2" filter="url(#glow)"/>
+<text x="400" y="282" fill="#7dd3fc" font-family="Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="3" text-anchor="middle">CPU</text>
+<g fill="#0d3328" stroke="#2dd4bf" stroke-opacity=".7" stroke-width="2">
+  <rect x="600" y="90" width="34" height="190" rx="6"/><rect x="650" y="90" width="34" height="190" rx="6"/>
+  <rect x="140" y="420" width="240" height="34" rx="6"/>
+  <rect x="600" y="450" width="110" height="34" rx="6"/>
+  <rect x="470" y="400" width="60" height="55" rx="6"/>
+  <rect x="55" y="140" width="40" height="110" rx="6"/>
+</g>
+<g fill="#7dd3fc" font-family="Arial, sans-serif" font-size="15" font-weight="700" text-anchor="middle">
+  <text x="617" y="192">RAM</text><text x="667" y="192">RAM</text>
+  <text x="260" y="442">GPU / PCIe</text><text x="655" y="472">SSD</text>
+  <text x="500" y="432">Chipset</text><text x="75" y="200">PSU</text>
+</g>
+<g fill="#0f2d24" stroke="#34d399" stroke-opacity=".6" stroke-width="2"><circle cx="550" cy="100" r="11"/><circle cx="550" cy="130" r="11"/><circle cx="550" cy="160" r="11"/><circle cx="250" cy="100" r="11"/><circle cx="250" cy="130" r="11"/></g>
+</svg>

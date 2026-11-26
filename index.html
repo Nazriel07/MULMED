@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SISKOM — Media Pembelajaran Interaktif Sistem Komputer</title>
+  <meta name="description" content="Website pembelajaran interaktif Sistem Komputer lengkap dengan penjelasan, simulasi alur kerja, dan game edukatif yang menyenangkan." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== Floating background decoration ===== -->
+  <div class="bg-orbs" aria-hidden="true">
+    <span class="orb orb-1"></span>
+    <span class="orb orb-2"></span>
+    <span class="orb orb-3"></span>
+  </div>
+
+  <!-- ===== Navbar ===== -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#beranda" class="brand">
+        <span class="brand-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M6 8h4M6 11h7"/></svg>
+        </span>
+        <span class="brand-text">SIS<span>KOM</span></span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#beranda" class="nav-link active">Beranda</a>
+        <a href="#penjelasan" class="nav-link">Penjelasan</a>
+        <a href="#simulasi" class="nav-link">Simulasi</a>
+        <a href="#game" class="nav-link">Game</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Buka menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="beranda">
+      <div class="hero-inner container">
+        <div class="hero-content">
+          <div class="badge badge-glow">Media Pembelajaran Interaktif</div>
+          <h1>Mengenal <span class="gradient-text">Sistem Komputer</span> dengan Cara yang Menyenangkan</h1>
+          <p>Pelajari bentuk, fungsi, dan cara kerja komponen komputer melalui <strong>penjelasan visual</strong>, <strong>simulasi alur data</strong>, dan <strong>game edukatif</strong>. Tanpa takut merusak perangkat asli!</p>
+          <div class="hero-actions">
+            <a href="#penjelasan" class="btn btn-primary">
+              Mulai Belajar
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="#simulasi" class="btn btn-outline">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              Lihat Simulasi
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="cpu-illustration">
+            <div class="cpu-glow"></div>
+            <img class="hero-img" src="gambar/hero-cpu.svg" alt="Ilustrasi prosesor CPU yang terpasang pada papan motherboard" />
+            <div class="orbit orbit-1"><span class="node n-input">INPUT</span></div>
+            <div class="orbit orbit-2"><span class="node n-proses">PROSES</span></div>
+            <div class="orbit orbit-3"><span class="node n-output">OUTPUT</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-hint">
+        <span>Gulir untuk menjelajah</span>
+        <div class="mouse"><span></span></div>
+      </div>
+    </section>
+
+    <!-- ===== Penjelasan ===== -->
+    <section class="section" id="penjelasan">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="section-tag">01 — PENJELASAN</span>
+          <h2>Kenali Setiap <span class="gradient-text">Komponen</span></h2>
+          <p>Klik kartu di bawah untuk melihat penjelasan lengkap, fungsi, dan fakta menarik tentang setiap komponen komputer.</p>
+        </div>
+
+        <div class="komponen-galeri" data-reveal>
+          <img src="gambar/komponen-komputer.svg" alt="Ilustrasi dua belas komponen utama sistem komputer" />
+          <div class="galeri-caption"><strong>Galeri Komponen</strong> — kenali bentuk fisik setiap perangkat sebelum mempelajari fungsinya.</div>
+        </div>
+
+        <div class="filter-bar" data-reveal>
+          <button class="filter-btn active" data-filter="semua">Semua</button>
+          <button class="filter-btn" data-filter="input">Perangkat Input</button>
+          <button class="filter-btn" data-filter="proses">Proses &amp; Kontrol</button>
+          <button class="filter-btn" data-filter="penyimpanan">Penyimpanan</button>
+          <button class="filter-btn" data-filter="output">Perangkat Output</button>
+        </div>
+
+        <div class="component-grid" id="componentGrid" data-reveal></div>
+
+        <!-- Number system mini explanation -->
+        <div class="nSystem-card" data-reveal>
+          <div class="nSystem-head">
+            <div class="nSystem-icon">#</div>
+            <div>
+              <h3>Sistem Bilangan dalam Sistem Komputer</h3>
+              <p>komputer bekerja dengan bilangan biner. Pahami empat sistem bilangan yang sering digunakan dan cara konversinya.</p>
+            </div>
+          </div>
+          <div class="nSystem-grid">
+            <div class="nSystem-item">
+              <span class="ns-badge ns-desimal">Desimal</span>
+              <strong>Basis 10</strong>
+              <p>Menggunakan angka 0–9. Sistem bilangan yang kita gunakan sehari-hari.</p>
+              <code>123<sub>10</sub></code>
+            </div>
+            <div class="nSystem-item">
+              <span class="ns-badge ns-biner">Biner</span>
+              <strong>Basis 2</strong>
+              <p>Hanya menggunakan 0 dan 1. Bahasa dasar yang dipahami komputer.</p>
+              <code>1111011<sub>2</sub></code>
+            </div>
+            <div class="nSystem-item">
+              <span class="ns-badge ns-oktal">Oktal</span>
+              <strong>Basis 8</strong>
+              <p>Menggunakan angka 0–7. Dulu dipakai untuk merangkum bilangan biner.</p>
+              <code>173<sub>8</sub></code>
+            </div>
+            <div class="nSystem-item">
+              <span class="ns-badge ns-heksa">Heksadesimal</span>
+              <strong>Basis 16</strong>
+              <p>Menggunakan 0–9 dan A–F. Sering dipakai untuk warna dan alamat memori.</p>
+              <code>7B<sub>16</sub></code>
+            </div>
+          </div>
+          <div class="ns-note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+            <span><strong>Tips:</strong> 1 heksadesimal = 4 bit biner, 1 oktal = 3 bit biner. Ingatlah ini untuk memudahkan konversi!</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Simulasi ===== -->
+    <section class="section section-alt" id="simulasi">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="section-tag">02 — SIMULASI</span>
+          <h2>Lihat Data <span class="gradient-text">Bergerak</span></h2>
+          <p>Jalankan simulasi untuk melihat bagaimana data dari perangkat input diproses CPU, disimpan sementara di RAM, dan ditampilkan ke layar.</p>
+        </div>
+
+        <!-- TEMPLATE VIDEO SIMULASI
+             Cara pakai: taruh file video di folder "video/", lalu isi SIM_VIDEO_SRC di js/app.js
+             dengan path file tersebut, misalnya: 'video/simulasi-sistem-komputer.mp4'.
+             Placeholder otomatis hilang setelah video siap diputar. -->
+        <div class="sim-video" data-reveal>
+          <div class="sim-video-head">
+            <div>
+              <h3>Video Simulasi</h3>
+              <p>Template video — file video akan ditambahkan kemudian.</p>
+            </div>
+            <span class="sim-video-badge">TEMPLATE</span>
+          </div>
+          <div class="sim-video-frame" id="simVideoFrame">
+            <video id="simVideo" controls playsinline preload="metadata">
+              Browser Anda tidak mendukung elemen video.
+            </video>
+            <div class="sim-video-placeholder" id="simVideoPlaceholder">
+              <div class="video-play-icon">▶</div>
+              <h4>Video Simulasi Sistem Komputer</h4>
+              <p>Tempat ini siap menampilkan video simulasi alur kerja komputer.</p>
+              <code>video/simulasi-sistem-komputer.mp4</code>
+              <span class="video-helper">Tambahkan path video pada <strong>SIM_VIDEO_SRC</strong> di <code>js/app.js</code></span>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Simulasi pemasangan motherboard -->
+        <div class="install-sim" data-reveal>
+          <div class="install-head">
+            <div>
+              <h3>Simulasi <span class="gradient-text">Pemasangan Motherboard</span></h3>
+              <p>Ikuti proses pemasangan komponen ke motherboard langkah demi langkah dengan aman. Tekan "Mulai" atau pilih langkah manual.</p>
+            </div>
+            <span class="install-badge">PANDUAN INTERAKTIF</span>
+          </div>
+          <img class="install-preview" src="gambar/motherboard.svg" alt="Ilustrasi tata letak komponen pada papan motherboard" />
+          <div class="install-toolbar">
+            <div class="sim-status">
+              <span class="status-dot" id="installDot"></span>
+              <span id="installStatus">Siap memulai pemasangan</span>
+            </div>
+            <div class="sim-controls">
+              <label class="speed-control">Kecepatan:
+                <select id="installSpeed">
+                  <option value="1900">Lambat</option>
+                  <option value="1250" selected>Normal</option>
+                  <option value="700">Cepat</option>
+                </select>
+              </label>
+              <button class="btn btn-primary btn-sm" id="installStart">▶ Mulai</button>
+              <button class="btn btn-ghost btn-sm" id="installNext">Langkah →</button>
+              <button class="btn btn-ghost btn-sm" id="installReset">↻ Ulangi</button>
+            </div>
+          </div>
+          <div class="install-body">
+            <div class="install-steps" id="installSteps"></div>
+            <div class="install-stage">
+              <div class="install-board" id="installBoard">
+                <div class="install-case" data-part="case"></div>
+              </div>
+              <div class="install-caption">
+                <span class="install-caption-num" id="installNum">0 / 7</span>
+                <div>
+                  <h4 id="installTitle">Siap Memulai</h4>
+                  <p id="installDesc">Tekan "Mulai" untuk melihat proses pemasangan komponen secara berurutan.</p>
+                  <p class="install-tip" id="installTip"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="install-progress"><span id="installProgress"></span></div>
+        </div>
+        <!-- Motherboard explorer -->
+        <div class="mb-explorer" data-reveal>
+          <div class="mb-head">
+            <div>
+              <h3>Rakit Tata Letak <span class="gradient-text">Motherboard</span></h3>
+              <p>Tarik komponen dari kotak ke posisi yang tepat di papan motherboard. Untuk layar sentuh: ketuk komponen, lalu ketuk posisinya.</p>
+            </div>
+            <div class="mb-score"><span>Terpasang</span><strong id="mbScore">0</strong><span>/ 6</span></div>
+          </div>
+          <div class="mb-body">
+            <div class="mb-board" id="mbBoard">
+              <div class="mb-slot" data-slot="psu" data-num="1" style="--x:11%;--y:28%;--w:13%;--h:20%;"><span class="slot-num">1</span></div>
+              <div class="mb-slot" data-slot="ram" data-num="2" style="--x:80%;--y:32%;--w:9%;--h:40%;"><span class="slot-num">2</span></div>
+              <div class="mb-slot" data-slot="cpu" data-num="3" style="--x:47%;--y:34%;--w:22%;--h:28%;"><span class="slot-num">3</span></div>
+              <div class="mb-slot" data-slot="gpu" data-num="4" style="--x:25%;--y:70%;--w:36%;--h:11%;"><span class="slot-num">4</span></div>
+              <div class="mb-slot" data-slot="chipset" data-num="5" style="--x:55%;--y:64%;--w:14%;--h:13%;"><span class="slot-num">5</span></div>
+              <div class="mb-slot" data-slot="storage" data-num="6" style="--x:76%;--y:76%;--w:18%;--h:15%;"><span class="slot-num">6</span></div>
+            </div>
+            <div class="mb-side">
+              <div class="mb-tray" id="mbTray"></div>
+              <div class="mb-detail" id="mbDetail">
+                <div class="mb-detail-icon" id="mbDetailIcon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M12 12v4"/></svg>
+                </div>
+                <h4 id="mbDetailTitle">Pilih Komponen</h4>
+                <p id="mbDetailDesc">Seret komponen dari kotak ke posisi yang tepat, atau ketuk komponen lalu ketuk posisinya.</p>
+              </div>
+              <button class="btn btn-ghost btn-sm" id="mbReset">↻ Ulangi Rakit</button>
+            </div>
+          </div>
+          <div class="mb-feedback" id="mbFeedback"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== Game ===== -->
+    <section class="section" id="game">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="section-tag">03 — GAME EDUKATIF</span>
+          <h2>Belajar Sambil <span class="gradient-text">Bermain</span></h2>
+          <p>Uji pemahamanmu lewat tiga permainan seru. Dapatkan skor setinggi mungkin dan jadi master sistem komputer!</p>
+        </div>
+
+        <div class="game-tabs" data-reveal>
+          <button class="game-tab active" data-game="kuis">
+            <span class="tab-emoji">🧠</span> Kuis Cepat
+          </button>
+          <button class="game-tab" data-game="cocok">
+            <span class="tab-emoji">🧩</span> Cocokkan Komponen
+          </button>
+          <button class="game-tab" data-game="bilangan">
+            <span class="tab-emoji">🔢</span> Tantangan Bilangan
+          </button>
+        </div>
+
+        <!-- KUIS -->
+        <div class="game-panel active" id="game-kuis" data-reveal>
+          <div class="game-card">
+            <div class="game-card-top">
+              <div class="score-box"><span>Skor</span><strong id="kuisScore">0</strong></div>
+              <div class="question-counter">Soal <strong id="kuisQNum">1</strong> / <span id="kuisQTotal">10</span></div>
+              <div class="lives-box" id="kuisLives">❤️ ❤️ ❤️</div>
+            </div>
+            <div class="quiz-body" id="quizBody">
+              <h3 id="quizQuestion">Memuat soal...</h3>
+              <div class="quiz-options" id="quizOptions"></div>
+              <div class="quiz-feedback" id="quizFeedback"></div>
+            </div>
+            <div class="game-card-bottom">
+              <button class="btn btn-primary" id="quizNext" disabled>Soal Berikutnya →</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- COCOKKAN -->
+        <div class="game-panel" id="game-cocok" data-reveal>
+          <div class="game-card">
+            <div class="game-card-top">
+              <div class="score-box"><span>Pasangan</span><strong id="cocokScore">0</strong> / 6</div>
+              <div class="question-counter">Klik gambar lalu nama yang sesuai</div>
+              <div class="lives-box" id="cocokTime">⏱️ <span id="cocokTimer">00:00</span></div>
+            </div>
+            <div class="matching-body">
+              <p class="matching-hint">Cocokkan setiap <strong>gambar komponen</strong> dengan <strong>namanya</strong>!</p>
+              <div class="matching-grid">
+                <div class="match-col" id="matchPictures"></div>
+                <div class="match-col" id="matchNames"></div>
+              </div>
+              <div class="quiz-feedback" id="cocokFeedback"></div>
+            </div>
+            <div class="game-card-bottom">
+              <button class="btn btn-primary" id="cocokReset">🔄 Main Lagi</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- BILANGAN -->
+        <div class="game-panel" id="game-bilangan" data-reveal>
+          <div class="game-card">
+            <div class="game-card-top">
+              <div class="score-box"><span>Skor</span><strong id="bilScore">0</strong></div>
+              <div class="question-counter">Ronde <strong id="bilRound">1</strong></div>
+              <div class="lives-box">🎯 Konversi</div>
+            </div>
+            <div class="bilangan-body">
+              <div class="bil-question">
+                <span>Konversikan bilangan berikut:</span>
+                <div class="bil-value" id="bilValue">1010</div>
+                <span class="bil-base" id="bilBase">Biner (basis 2)</span>
+              </div>
+              <div class="bil-arrow">↓</div>
+              <div class="bil-answer">
+                <label for="bilInput">Jawaban dalam <strong id="bilTarget">Desimal</strong>:</label>
+                <div class="bil-input-row">
+                  <input type="text" id="bilInput" placeholder="Masukkan jawaban..." autocomplete="off" />
+                  <button class="btn btn-primary btn-sm" id="bilCheck">Cek</button>
+                </div>
+                <div class="quiz-feedback" id="bilFeedback"></div>
+                <button class="btn btn-outline btn-sm bil-next" id="bilNext" hidden>Soal Berikutnya →</button>
+              </div>
+              <div class="bil-hint" id="bilHint"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="brand">
+          <span class="brand-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4M6 8h4M6 11h7"/></svg>
+          </span>
+          <span class="brand-text">SIS<span>KOM</span></span>
+        </div>
+        <p>Media Pembelajaran Interaktif Sistem Komputer. Belajar jadi lebih mudah, aman, dan menyenangkan.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Jelajahi</h4>
+        <a href="#penjelasan">Penjelasan</a>
+        <a href="#simulasi">Simulasi</a>
+        <a href="#game">Game Edukatif</a>
+      </div>
+      <div class="footer-note">
+        <h4>Dibuat untuk Pembelajaran</h4>
+        <p>✨ Penjelasan visual<br>⚙️ Simulasi alur data<br>🎮 Game edukatif</p>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>© 2026 SISKOM — Media Pembelajaran Sistem Komputer. Seluruh hak dilindungi.</p>
+    </div>
+  </footer>
+
+  <!-- ===== Modal ===== -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-overlay" data-close></div>
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" data-close aria-label="Tutup">&times;</button>
+      <div class="modal-header">
+        <div class="modal-icon" id="modalIcon"></div>
+        <div>
+          <span class="modal-badge" id="modalBadge"></span>
+          <h2 id="modalTitle"></h2>
+        </div>
+      </div>
+      <div class="modal-body">
+        <p class="modal-desc" id="modalDesc"></p>
+        <div class="modal-section">
+          <h4>⚙️ Fungsi Utama</h4>
+          <p id="modalFungsi"></p>
+        </div>
+        <div class="modal-section">
+          <h4>💡 Fakta Menarik</h4>
+          <p id="modalFakta"></p>
+        </div>
+        <div class="modal-section modal-ipos">
+          <h4>🔄 Peran dalam Alur Data</h4>
+          <p id="modalIpos"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#10231c"/><stop offset="1" stop-color="#07110d"/></linearGradient>
+  <linearGradient id="chip" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1d4438"/><stop offset="1" stop-color="#0d241d"/></linearGradient>
+  <linearGradient id="board" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#12352b"/><stop offset="1" stop-color="#0a1f19"/></linearGradient>
+  <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#2dd4bf" stroke-opacity=".09" stroke-width="1"/></pattern>
+  <filter id="glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="14" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="soft" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="5"/></filter>
+</defs>
+<rect width="800" height="600" rx="30" fill="url(#bg)"/>
+<rect width="800" height="600" rx="30" fill="url(#grid)"/>
+<circle cx="400" cy="300" r="220" fill="#10b981" fill-opacity=".07" filter="url(#soft)"/>
+<g stroke="#2dd4bf" stroke-opacity=".5" stroke-width="2.5" stroke-linecap="round">
+  <path d="M40 130h150l50 50h90M760 150H620l-55 55h-80M50 470h140l45-45h90M750 460H630l-50-50h-70M140 300h70M660 300h-70M400 70v65M400 530v-65"/>
+</g>
+<g fill="#fbbf24"><circle cx="330" cy="180" r="4"/><circle cx="485" cy="205" r="4"/><circle cx="235" cy="425" r="4"/><circle cx="580" cy="410" r="4"/></g>
+<g stroke="#34d399" stroke-width="5" stroke-linecap="round" opacity=".85">
+  <path d="M290 175v-28M330 175v-28M370 175v-28M410 175v-28M450 175v-28M490 175v-28M530 175v-28"/>
+  <path d="M290 425v28M330 425v28M370 425v28M410 425v28M450 425v28M490 425v28M530 425v28"/>
+  <path d="M270 195h-28M270 235h-28M270 275h-28M270 315h-28M270 355h-28M270 395h-28"/>
+  <path d="M550 195h28M550 235h28M550 275h28M550 315h28M550 355h28M550 395h28"/>
+</g>
+<rect x="270" y="175" width="280" height="250" rx="26" fill="url(#chip)" stroke="#2dd4bf" stroke-width="3"/>
+<rect x="312" y="217" width="196" height="166" rx="16" fill="#091812" stroke="#10b981" stroke-width="2"/>
+<circle cx="410" cy="300" r="58" fill="#10b981" fill-opacity=".22" filter="url(#glow)"/>
+<g stroke="#2dd4bf" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" transform="translate(378 266) scale(2.7)">
+  <rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 19v3M15 19v3M1 9h3M1 15h3M19 9h3M19 15h3"/>
+</g>
+<text x="410" y="378" fill="#7dd3fc" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="6" text-anchor="middle">CPU</text>
+<g fill="#0f2d24" stroke="#2dd4bf" stroke-opacity=".6"><circle cx="120" cy="220" r="18"/><circle cx="690" cy="230" r="18"/><circle cx="130" cy="390" r="18"/><circle cx="680" cy="380" r="18"/></g>
+</svg>
